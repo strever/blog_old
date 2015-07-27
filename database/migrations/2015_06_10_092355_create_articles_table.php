@@ -18,12 +18,13 @@ class CreateArticlesTable extends Migration {
             $table->string('title');
             $table->string('sub_title');
             $table->tinyInteger('cate_id')->default(0);
-            $table->string('path');
+            $table->text('content');
             $table->integer('comment_count')->default(1);
             $table->integer('visited_count')->default(1);
             $table->tinyInteger('comment_enabled')->default(1);
             $table->tinyInteger('is_show')->default(0);
             $table->string('tags');
+            $table->timestamp('published_at');
 			$table->timestamps();
 		});
 	}
