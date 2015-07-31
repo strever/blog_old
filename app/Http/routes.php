@@ -22,6 +22,9 @@ Route::get('home', 'HomeController@index');
 
 Route::resource('/articles', 'Article');
 
+Route::get('/tags/{tag}', 'Tag@show');
+
+
 //测试路由
 
 Route::get('test/{param?}', function($hello = 'hello') {

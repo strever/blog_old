@@ -30,4 +30,9 @@ class Article extends Model {
         $this->attributes['published_at'] = Carbon::createFromFormat('Y-m-d', $date);
     }
 
+    public function tags()
+    {
+        $this->hasMany('\App\Tag');
+    }
+
 }

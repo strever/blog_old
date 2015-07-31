@@ -25,7 +25,7 @@
                     <td>{{ $article->content }}</td>
                     <td>
                         <a class="btn btn-primary" href="{{ url('/articles', $article->id) }}">查看</a>
-                        <a class="btn btn-primary" href="{{ route('/articles/{$article->id}/edit') }}">编辑</a>
+                        <a class="btn btn-primary" href="{{ route('articles.edit', $article->id) }}">编辑</a>
                     </td>
                 </tr>
             @endforeach

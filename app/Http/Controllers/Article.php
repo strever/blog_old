@@ -3,6 +3,7 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Tag;
 use Illuminate\Http\Request;
 use App\Http\Requests\ArticleRequest;
 
@@ -29,8 +30,8 @@ class Article extends Controller {
 	 */
 	public function create()
 	{
-		//
-        return view('articles.create');
+		$tags = Tag::all(['id','name']);
+        return view('articles.create', compact('tags'));
 	}
 
 	/**

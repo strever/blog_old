@@ -22,6 +22,9 @@
 
             <br>
 
+            {!! Form::label('tags', 'Tags :') !!}
+            {!! Form::select('tags', $tags, ['class' => 'form-control', 'multiple']) !!}
+
             {!! Form::submit('Add Article', ['class' => 'btn btn-primary btn-block']) !!}
 
         </div>
