@@ -23,6 +23,7 @@
         "Illuminate\\Validation\\ValidationServiceProvider",
         "Illuminate\\View\\ViewServiceProvider",
         "Illuminate\\Html\\HtmlServiceProvider",
+        "Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider",
         "App\\Providers\\AppServiceProvider",
         "App\\Providers\\BusServiceProvider",
         "App\\Providers\\ConfigServiceProvider",
@@ -128,7 +129,9 @@
         "translator": "Illuminate\\Translation\\TranslationServiceProvider",
         "translation.loader": "Illuminate\\Translation\\TranslationServiceProvider",
         "html": "Illuminate\\Html\\HtmlServiceProvider",
-        "form": "Illuminate\\Html\\HtmlServiceProvider"
+        "form": "Illuminate\\Html\\HtmlServiceProvider",
+        "command.ide-helper.generate": "Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider",
+        "command.ide-helper.models": "Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider"
     },
     "when": {
         "Illuminate\\Foundation\\Providers\\ArtisanServiceProvider": [
@@ -165,6 +168,9 @@
 
         ],
         "Illuminate\\Html\\HtmlServiceProvider": [
+
+        ],
+        "Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider": [
 
         ]
     }

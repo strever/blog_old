@@ -136,6 +136,9 @@ return [
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
         'Illuminate\Html\HtmlServiceProvider',
+        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
+        'Cartalyst\Sentry\SentryServiceProvider',
+
 
 		/*
 		 * Application Service Providers...
@@ -195,6 +198,7 @@ return [
 		'View'      => 'Illuminate\Support\Facades\View',
         'Form'      => 'Illuminate\Html\FormFacade',
         'Html'      => 'Illuminate\Html\HtmlFacade',
+        'Sentry'    => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
 
 	],
 
