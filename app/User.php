@@ -1,14 +1,8 @@
 <?php namespace App;
 
-use Illuminate\Auth\Authenticatable;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Auth\Passwords\CanResetPassword;
-use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
-use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use Cartalyst\Sentinel\Users\EloquentUser;
 
-class User extends Model implements AuthenticatableContract, CanResetPasswordContract {
-
-	use Authenticatable, CanResetPassword;
+class User extends EloquentUser {
 
 	/**
 	 * The database table used by the model.
@@ -18,11 +12,21 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	protected $table = 'users';
 
 	/**
-	 * The attributes that are mass assignable.
+	 * {@inheritDoc}
+	 */
+	protected $fillable = [
+		'username',
+		'email',
+		'password',
+		'permissions',
+	];
+
+	/**
+	 * Array of login column names.
 	 *
 	 * @var array
 	 */
-	protected $fillable = ['name', 'email', 'password'];
+	protected $loginNames = ['username', 'email'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.

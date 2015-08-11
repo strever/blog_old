@@ -137,7 +137,7 @@ return [
 		'Illuminate\View\ViewServiceProvider',
         'Illuminate\Html\HtmlServiceProvider',
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
-        'Cartalyst\Sentry\SentryServiceProvider',
+		'Cartalyst\Sentinel\Laravel\SentinelServiceProvider',
 
 
 		/*
@@ -198,7 +198,9 @@ return [
 		'View'      => 'Illuminate\Support\Facades\View',
         'Form'      => 'Illuminate\Html\FormFacade',
         'Html'      => 'Illuminate\Html\HtmlFacade',
-        'Sentry'    => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
+		'Sentinel'  => 'Cartalyst\Sentinel\Laravel\Facades\Sentinel',
+		'Activation'=> 'Cartalyst\Sentinel\Laravel\Facades\Activation',
+		'Reminder'  => 'Cartalyst\Sentinel\Laravel\Facades\Reminder',
 
 	],
 
