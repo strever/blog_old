@@ -138,6 +138,7 @@ return [
         'Illuminate\Html\HtmlServiceProvider',
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
 		'Cartalyst\Sentinel\Laravel\SentinelServiceProvider',
+		'GrahamCampbell\Markdown\MarkdownServiceProvider',
 
 
 		/*
@@ -201,6 +202,7 @@ return [
 		'Sentinel'  => 'Cartalyst\Sentinel\Laravel\Facades\Sentinel',
 		'Activation'=> 'Cartalyst\Sentinel\Laravel\Facades\Activation',
 		'Reminder'  => 'Cartalyst\Sentinel\Laravel\Facades\Reminder',
+		'MarkDown'  => 'GrahamCampbell\Markdown\Facades\Markdown',
 
 	],
 

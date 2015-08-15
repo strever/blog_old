@@ -11,13 +11,11 @@
 |
 */
 
-Route::get('/', 'ArticleController@index');
-
-Route::get('/login', 'Auth\AuthController@login');
-
-Route::resource('/articles', 'Article');
-
-Route::get('/tags/{tag}', 'Tag@show');
+Route::group(['namespace' => 'Admin', 'domain' => 'admin.blog.dev'], function() {
+    Route::get('/articles/create', 'ArticleController@create');
+    Route::post('/articles', ['as' => 'articles.create', 'uses' => 'ArticleController@store']);
+    Route::get('/articles/{id}/edit', 'ArticleController@edit');
+});
 
 
 //测试路由
